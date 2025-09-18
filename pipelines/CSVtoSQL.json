@@ -1,0 +1,301 @@
+{
+    "name": "CSVtoSQL",
+    "properties": {
+        "activities": [
+            {
+                "name": "Copy data1",
+                "type": "Copy",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [
+                    {
+                        "name": "Source",
+                        "value": "raw//price_data.csv"
+                    },
+                    {
+                        "name": "Destination",
+                        "value": "dbo.price_data"
+                    }
+                ],
+                "typeProperties": {
+                    "source": {
+                        "type": "DelimitedTextSource",
+                        "storeSettings": {
+                            "type": "AzureBlobStorageReadSettings",
+                            "recursive": true,
+                            "enablePartitionDiscovery": false
+                        },
+                        "formatSettings": {
+                            "type": "DelimitedTextReadSettings"
+                        }
+                    },
+                    "sink": {
+                        "type": "AzureSqlSink",
+                        "writeBehavior": "insert",
+                        "sqlWriterUseTableLock": false
+                    },
+                    "enableStaging": false,
+                    "translator": {
+                        "type": "TabularTranslator",
+                        "mappings": [
+                            {
+                                "source": {
+                                    "name": "baseFare",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "baseFare",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "reservationCharge",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "reservationCharge",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "superfastCharge",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "superfastCharge",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "fuelAmount",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "fuelAmount",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "totalConcession",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "totalConcession",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "tatkalFare",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "tatkalFare",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "serviceTax",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "serviceTax",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "otherCharge",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "otherCharge",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "cateringCharge",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "cateringCharge",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "dynamicFare",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "dynamicFare",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "totalFare",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "totalFare",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "availability",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "availability",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "trainNumber",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "trainNumber",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "timeStamp",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "timeStamp",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "fromStnCode",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "fromStnCode",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "toStnCode",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "toStnCode",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "classCode",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "classCode",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "distance",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "distance",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "duration",
+                                    "type": "String",
+                                    "physicalType": "String"
+                                },
+                                "sink": {
+                                    "name": "duration",
+                                    "type": "String",
+                                    "physicalType": "text"
+                                }
+                            }
+                        ],
+                        "typeConversion": true,
+                        "typeConversionSettings": {
+                            "allowDataTruncation": true,
+                            "treatBooleanAsNumber": false
+                        }
+                    }
+                },
+                "inputs": [
+                    {
+                        "referenceName": "ticket_prices_data_set",
+                        "type": "DatasetReference"
+                    }
+                ],
+                "outputs": [
+                    {
+                        "referenceName": "AzureSqlTable1",
+                        "type": "DatasetReference"
+                    }
+                ]
+            }
+        ],
+        "annotations": [],
+        "lastPublishTime": "2025-09-12T04:59:23Z"
+    },
+    "type": "Microsoft.DataFactory/factories/pipelines"
+}
