@@ -1,0 +1,21 @@
+CREATE TABLE price_data(
+baseFare	VARCHAR,	
+reservationCharge	VARCHAR,	
+superfastCharge	VARCHAR,	
+fuelAmount	VARCHAR,
+totalConcession	VARCHAR,	
+tatkalFare	VARCHAR,	
+serviceTax	VARCHAR,	
+otherCharge	VARCHAR,	
+cateringCharge	VARCHAR,
+dynamicFare	VARCHAR,	
+totalFare	VARCHAR,	
+availability	VARCHAR,	
+trainNumber	VARCHAR,	
+timeStamp	VARCHAR,	
+fromStnCode	VARCHAR,	
+toStnCode	VARCHAR,	
+classCode	VARCHAR,	
+distance	VARCHAR,	
+duration	VARCHAR
+);
