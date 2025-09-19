@@ -16,7 +16,7 @@ This project demonstrates a simple **data pipeline** built on **Azure Data Facto
 
 ---
 
-## 📸 Screenshot - Preview
+## 📸 Screenshots - Preview
 
 Resource Group:
 ![Resource Group](./images/01_resource_group.jpeg)
