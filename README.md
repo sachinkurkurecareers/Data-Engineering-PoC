@@ -1,32 +1,24 @@
-\# Data Engineering PoC
+# Data Engineering PoC
 
+This project demonstrates a simple **data pipeline** built on **Azure Data Factory**, loading data from CSV into Azure SQL Database and visualizing insights in **Power BI**.
 
+---
 
-This project demonstrates a simple \*\*data pipeline\*\* built on \*\*Azure Data Factory\*\*, loading data from CSV into Azure SQL Database and visualizing insights in \*\*Power BI\*\*.
+## 🚀 Features
 
+- Ingests CSV files from Azure Blob Storage
 
+- Cleans and transforms data in ADF
+
+- Stores processed data in Azure SQL Database
+
+- Power BI dashboard for visualization
 
 ---
 
 
 
-\## 🚀 Features
-
-\- Ingests CSV files from Azure Blob Storage
-
-\- Cleans and transforms data in ADF
-
-\- Stores processed data in Azure SQL Database
-
-\- Power BI dashboard for visualization
-
-
-
----
-
-
-
-\## 📸 Screenshot
+## 📸 Screenshot
 
 
 
@@ -34,7 +26,7 @@ Here is a preview of the Resource Group:
 
 
 
-!\[Resource Group](./images/01\_resource\_group.jpeg)
+![Resource Group](./images/01_resource_group.jpeg)
 
 
 
